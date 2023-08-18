@@ -77,17 +77,17 @@ wget http://localhost:<your syz-manager port>/rawcover
 Now this raw cover data can be fed to `syz-cover` to generate coverage report:
 
 ``` bash
-./bin/syz-cover --kernel_obj <directory where vmlinux is located> rawcover
+./bin/syz-cover -config config_file rawcover
 ```
 
 You can also export CSV file containing function coverage by:
 
 ``` bash
-./bin/syz-cover --kernel_obj <directory where vmlinux is located> --csv <filename where to export>  rawcover
+./bin/syz-cover -config config_file --csv <filename where to export>  rawcover
 ```
 
 You can export a JSON file containing line coverage info by:
 
 ```bash
-./bin/syz-cover --kernel_obj <directory where vmlinux is located> --json <filename where to export>  rawcover
+./bin/syz-cover -config config_file --json <filename where to export>  rawcover
 ```
